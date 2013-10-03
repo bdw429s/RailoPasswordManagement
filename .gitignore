@@ -2,6 +2,8 @@
 ## Eclipse
 #################
 
+WEB-INF
+
 *.pydevproject
 .project
 .metadata
