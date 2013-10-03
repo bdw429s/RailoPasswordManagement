@@ -3,6 +3,7 @@
 #################
 
 WEB-INF
+settings.xml
 
 *.pydevproject
 .project
