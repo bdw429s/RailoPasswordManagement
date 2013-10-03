@@ -20,7 +20,7 @@ component{
 			rc.datasourceEncBlowFish = passwordManager.encryptDataSource(event.getValue('datasourcePlainBlowFish',''));
 		// Decrypt data source pass
 		} else if(local.action == 'datasourceDec') {
-			rc.datasourcePlainBlowFish = passwordManager.decryptDataSource(event.getValue('datasourceEncBlowFish',''));				
+			rc.datasourcePlainBlowFish = passwordManager.decryptDataSource(replaceNoCase(event.getValue('datasourceEncBlowFish',''),"encrypted:",""));				
 		}	
 		
 		// re-include the same form
