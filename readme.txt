@@ -2,7 +2,7 @@ I am a utility for managing Railo passwords for the administrator and data sourc
 Normally, you won't need me, but sometimes you need to edit the config files directly.
 
 All you need is the passwordManager.cfc file in the model directory, but if you want you can run this entire directory as a small ColdBox LITE app that will allow you 
-to punch in your passwords into a field field to have them encrypted/decrypted for you.
+to punch in your passwords into a form field to have them encrypted/decrypted for you.
 
 hashAdministrator - Use this to mimic the same SHA-256 hashing that the Railo administrator uses for server and web context passwords. You can't duplicate this
 with the CFML hash() function.  
