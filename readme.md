@@ -27,21 +27,24 @@ Values created by this method would go in one of the following files:
 railo-server.xml
 	In a <data-source> tag's password attribute, preceded by the string "encrypted:"
 
+```
 	<data-source 
 		username="root"
 		name="myDS" 
 		dsn="jdbc:mysql://localhost:3306/myDB" 
 		class="org.gjt.mm.mysql.Driver"
 		password="encrypted:3448cf390fa78e1cbb7745607a68ff6e282d60c044ad09ed" />
-				  	
+```
+
 railo-web.xml.cfm
 	In a <data-source> tag same as above
 Application.cfc
 	In the datasources struct like so:
 
+```
 	this.datasources.myDS={
 		class:"org.gjt.mm.mysql.Driver",
             	connectionString:"jdbc:mysql://localhost:3306/myDB",
             	username:"root",
             	password:"encrypted:3448cf390fa78e1cbb7745607a68ff6e282d60c044ad09ed"
-            		
+```       		
