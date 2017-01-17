@@ -4,7 +4,7 @@ I am a utility for managing Lucee or Railo passwords for the administrator and d
 
 All you need is the `passwordManager.cfc` file in the model directory, but if you want you can run this entire directory as a small ColdBox LITE app that will allow you 
 
-# hashAdministrator
+# hashAdministrator()
 Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator uses for server and web context passwords. You can't duplicate this with the CFML hash() function.  
 
 * *lucee-server.xml*
@@ -15,7 +15,7 @@ Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator
  * In the root `<lucee-configuration>` tag as the `pw` attribute.  Applies to the web administrator for that context.
  * In the root `<lucee-configuration>` tag as the `salt` attribute.  Set's the salt to be used for any hashed passwords
  
-# encryptAdministrator / decryptAdministrator
+# encryptAdministrator() / decryptAdministrator()
 *[DEPRECATED, use hash instead]* Used to encrypt a string using the BlowFish algorithm with the same salt used for the Lucee or Railo administrator.  
 
 * *lucee-server.xml*
@@ -24,7 +24,7 @@ Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator
 * *lucee-web.xml.cfm*
  * In the root `<lucee-configuration>` tag as the `password` attribute.  Applies to the web administrator for that context.
 
-# encryptDataSource / decryptDataSource
+# encryptDataSource() / decryptDataSource()
 Used to decrypt a string using the BlowFish algorithm with the same salt used for data source passwords in the Lucee or Railo administrator.
 
 Values created by this method would go in one of the following files:
