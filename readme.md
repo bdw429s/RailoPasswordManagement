@@ -62,7 +62,7 @@ this.datasources.myDS={
 	password:"encrypted:3448cf390fa78e1cbb7745607a68ff6e282d60c044ad09ed"
 ```        
 
-# mail server passwords
+# Mail Server Passwords
 
 Mail server passwords use the same scheme as data source passwords.  You can encrypt and decrypt them with the `encryptDataSource()` and `decryptDataSource()` methods.
 
