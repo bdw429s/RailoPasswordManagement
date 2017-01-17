@@ -1,4 +1,4 @@
 ﻿<cfoutput>
-	<h2>Railo Password Manager</h2>
+	<h2>Lucee/Railo Password Manager</h2>
 	#renderView()#
 </cfoutput>

@@ -12,9 +12,12 @@ component{
 		// Decrypt admin pass
 		} else if(local.action == 'adminDec') {
 			rc.adminPlainBlowFish = passwordManager.decryptAdministrator(event.getValue('adminEncBlowFish',''));
-		// Hash admin pass				
+		// Hash admin pass
 		} else if(local.action == 'adminHash') {
 			rc.adminEncHash = passwordManager.hashAdministrator(event.getValue('adminPlainHash',''));
+		// Hash admin salted pass
+		} else if(local.action == 'adminSaltedHash') {
+			rc.adminEncSaltedHash = passwordManager.hashAdministrator(event.getValue('adminPlainSaltedHash',''),event.getValue('adminPlainSalt',''));
 		// Encrypt data source pass
 		} else if(local.action == 'datasourceEnc') {
 			rc.datasourceEncBlowFish = passwordManager.encryptDataSource(event.getValue('datasourcePlainBlowFish',''));
