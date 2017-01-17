@@ -29,7 +29,7 @@ Used to decrypt a string using the BlowFish algorithm with the same salt used fo
 
 Values created by this method would go in one of the following files:
 
-* lucee-server.xml
+* *lucee-server.xml*
  * In a `<data-source>` tag's `password` attribute, preceded by the string `encrypted:`
 
 ```xml
@@ -42,10 +42,9 @@ Values created by this method would go in one of the following files:
 ```
 			  	
 * *lucee-web.xml.cfm*
-	In a `<data-source>` tag same as above
+ * In a `<data-source>` tag same as above
 * *Application.cfc*
  * In the datasources struct like so:
-
 
  ```js
 this.datasources.myDS={
