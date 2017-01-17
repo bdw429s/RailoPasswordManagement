@@ -2,7 +2,19 @@
 	I am a utility for managing Lucee or Railo passwords for the administrator and data sources.
 	Normally, you won't need me, but sometimes you need to edit the config files directly.
 	
-	hashAdministrator - Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator uses for server and web context passwords. You can't duplicate this
+	
+	hashAdministrator - When passing a salt, use this to mimic the same SHA-256 hashing that the Lucee administrator uses for server and web context passwords. You can't duplicate this
+						with the CFML hash() function.  
+						Values created by this method would go in one of the following XML files:
+						lucee-server.xml
+							In the root <lucee-configuration> tag as the "hspw" attribute.  Applies to the web administrator for the entire server
+							In the root <lucee-configuration> tag as the "default-hspw" attribute.  Set's the default password for any new web contexts
+							In the root <lucee-configuration> tag as the "salt" attribute.  Set's the salt to use for all passwords
+						lucee-web.xml.cfm
+							In the root <lucee-configuration> tag as the "hspw" attribute.  Applies to the web administrator for that context.
+							In the root <lucee-configuration> tag as the "salt" attribute.  Set's the salt to use for all passwords
+							
+	hashAdministrator - [DEPRECATED. use hash with salt instead] Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator uses for server and web context passwords. You can't duplicate this
 						with the CFML hash() function.  
 						Values created by this method would go in one of the following XML files:
 						lucee-server.xml
@@ -11,8 +23,8 @@
 						lucee-web.xml.cfm
 							In the root <lucee-configuration> tag as the "pw" attribute.  Applies to the web administrator for that context.
 							
-	encryptAdministrator - [DEPRECATED, use hash instead] Used to encrypt a string using the BlowFish algorithm with the same salt used for the Lucee or Railo administrator.  
-	decryptAdministrator - [DEPRECATED, use hash instead] Used to decrypt a string using the BlowFish algorithm with the same salt used for the Lucee or Railo administrator.  
+	encryptAdministrator - [DEPRECATED, use hash with salt instead] Used to encrypt a string using the BlowFish algorithm with the same salt used for the Lucee or Railo administrator.  
+	decryptAdministrator - [DEPRECATED, use hash with salt instead] Used to decrypt a string using the BlowFish algorithm with the same salt used for the Lucee or Railo administrator.  
 						lucee-server.xml
 							In the root <lucee-configuration> tag as the "password" attribute.  Applies to the web administrator for the entire server
 							In the root <lucee-configuration> tag as the "default-password" attribute.  Set's the default password for any new web contexts
