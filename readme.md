@@ -46,6 +46,7 @@ Values created by this method would go in one of the following files:
 * *Application.cfc*
  * In the datasources struct like so:
 
+
  ```js
 this.datasources.myDS={
 	class:"org.gjt.mm.mysql.Driver",
