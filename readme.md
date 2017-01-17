@@ -14,6 +14,10 @@ Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator
 * *lucee-web.xml.cfm*
  * In the root `<lucee-configuration>` tag as the `pw` attribute.  Applies to the web administrator for that context.
  * In the root `<lucee-configuration>` tag as the `salt` attribute.  Set's the salt to be used for any hashed passwords
+
+```xml
+<cfLuceeConfiguration hspw="eb93137093b23f3230657d1f8cad7bfe0c00975805fb017f608448bbda3f33a0" salt="4BD328D9-9471-49FE-BFCC96C8C1949BEC">
+```
  
 # encryptAdministrator() / decryptAdministrator()
 *[DEPRECATED, use hash instead]* Used to encrypt a string using the BlowFish algorithm with the same salt used for the Lucee or Railo administrator.  
@@ -23,6 +27,10 @@ Use this to mimic the same SHA-256 hashing that the Lucee or Railo administrator
  * In the root `<lucee-configuration>` tag as the `default-password` attribute.  Set's the default password for any new web contexts
 * *lucee-web.xml.cfm*
  * In the root `<lucee-configuration>` tag as the `password` attribute.  Applies to the web administrator for that context.
+
+```xml
+<cfLuceeConfiguration password="e38a144b46552ecf4e9ffb40bfe1217bffe8c19676959800f02e78ddc6c7d372">
+```
 
 # encryptDataSource() / decryptDataSource()
 Used to decrypt a string using the BlowFish algorithm with the same salt used for data source passwords in the Lucee or Railo administrator.
